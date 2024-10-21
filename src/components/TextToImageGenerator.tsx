@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 export function TextToImageGenerator() {
   const [bgColor, setBgColor] = useState("#ffffff");
@@ -124,6 +125,12 @@ export function TextToImageGenerator() {
           <Button onClick={handleDownload} className="w-full">
             <Download className="mr-2 h-4 w-4" /> Download Image
           </Button>
+          <small className="text-gray-500">
+            Made with ❤️ by{" "}
+            <Link href="https://x.com/LoconLuis" target="__blank">
+              @LoconLuis
+            </Link>
+          </small>
         </CardContent>
       </Card>
     </div>
